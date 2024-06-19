@@ -37,15 +37,9 @@ def update_body():
 # main function, triggered with button
 def click_button():
     """Actions to perform when button clicked"""
-    headers = {'Content-Type': 'application/json; charset=utf-8'}
+    headers = {"Content-Type": "application/json; charset=utf-8"}
     user_input = st.session_state.title_input + " " + st.session_state.body_input
     post_data = {"user_input": user_input}
-
-    print("\n\n********** DEBUG ***********")
-    print(f"{user_input = }")
-    print(f"{post_data = }")
-    print("********** DEBUG ***********\n\n")
-
     response = requests.post(API_URL, headers=headers, json=post_data, timeout=5)
 
     try:

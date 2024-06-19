@@ -63,16 +63,18 @@ else:
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def home_page():
     return "<h1>Get tags (from where you once asked for)</h1>"
+
 
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
         user_input = request.get_json(force=True)["user_input"]
         logging.debug(f"{user_input = }")
-        
+
         # check user input
         if not check_length(user_input):
             message = "⚠️  Input length is too short"

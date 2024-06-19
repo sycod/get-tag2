@@ -4,6 +4,7 @@ dill                # Pickle alternative for data science
 emoji               # Emoji support
 flask               # API needs
 gensim              # topic modelling
+gunicorn            # API needs
 pylint              # great linter
 pytest              # unit tests
 pytest-cov          # unit tests, cover a specific function

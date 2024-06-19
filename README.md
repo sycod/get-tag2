@@ -63,7 +63,7 @@ Click the **prediction button** to **predict tags** related with this question.
 6. **ready** to go!  
 **prove it** by running unit tests:  
 ➡️ run `make test`
-7. **run API** on a local server, easy peezy:
+7. **run API interface** on a local Streamlit server, easy peezy:
 ➡️ run `make run_ask_api`  
 (which uses `streamlit run ask_api.py` in console)
 

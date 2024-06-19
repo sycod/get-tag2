@@ -6,7 +6,7 @@ license: MIT
 URL: get-tag.streamlit.app
 ---
 
-[![Build, install, lint, test and format](https://github.com/sycod/get_tag2/actions/workflows/main.yaml/badge.svg)](https://github.com/sycod/get_tag2/actions/workflows/main.yaml)
+[![Build, install, lint, test and format](https://github.com/sycod/get-tag2/actions/workflows/main.yaml/badge.svg)](https://github.com/sycod/get-tag2/actions/workflows/main.yaml)
 
 # [➡️ API endpoint here ⬅️](https://get-tag.streamlit.app)
 

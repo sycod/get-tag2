@@ -1,0 +1,38 @@
+{
+  "name": "Python 3.11",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "api.py"
+      ]
+    },
+    "vscode": {
+      "settings": {
+        "workbench.panel.defaultLocation": "right",
+        "notebook.lineNumbers": "on",
+        "notebook.output.wordWrap": true,
+      },
+      "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "ms-python.pylint",
+          "GitHub.copilot",
+          "xelad0m.jupyter-toc",
+          "mhutchie.git-graph"
+      ]
+    }
+  },
+  "onCreateCommand": {
+    "apt_update": "sudo apt update && sudo apt -y upgrade",
+    "venv_create": "python -m venv ~/.env",
+  },
+  "updateContentCommand": {
+      "apt_update": "sudo apt update && sudo apt -y upgrade",
+      "pip_inst_reqs": "~/.env/bin/pip3 install --upgrade pip && ~/.env/bin/pip3 install -r requirements.txt && echo '✅ Packages installed and Requirements met'",
+    },
+  "postCreateCommand": {
+    "bashrc_update": "chmod +x ./.devcontainer/bashrc_update.sh && ./.devcontainer/bashrc_update.sh",
+  },
+}

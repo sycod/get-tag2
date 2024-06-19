@@ -5,8 +5,8 @@ import requests
 
 
 # CONFIG
-# API_URL = "https://credit-f7b3b911ecd1.herokuapp.com/predict"
-API_URL = "https://localhost:13370/predict"
+# API_URL = "http://get-tag-bc104755b0e2.herokuapp.com/predict"
+API_URL = "http://localhost:13370/predict"
 # placeholders
 TITLE_PLACEHOLDER = "example: pandas merge with Python >3.5"
 BODY_PLACEHOLDER = """example:

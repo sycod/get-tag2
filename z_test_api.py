@@ -1,6 +1,7 @@
 import requests
 
-url = "https://localhost:5000/predict"
+
+url = "http://get-tag-bc104755b0e2.herokuapp.com/predict"
 
 TITLE_PLACEHOLDER = "example: pandas merge with Python >3.5"
 BODY_PLACEHOLDER = """example:
@@ -11,7 +12,7 @@ user_input = TITLE_PLACEHOLDER + "\n" + BODY_PLACEHOLDER
 
 payload = {"user_input": user_input}
 headers = {'Content-Type': 'application/json; charset=utf-8'}
-response = requests.post(url, json=payload, headers=headers, timeout=5, verify=False)
+response = requests.post(url, json=payload, headers=headers, timeout=5)
 
 # Vérifier le code de statut de la réponse
 if response.status_code == 200:

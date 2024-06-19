@@ -133,7 +133,7 @@ def predict():
                 predicted_tags = None
                 logging.warning(message)
             else:
-                # predict tags
+                message = None
                 predicted_tags = predict_tags(input_clean, vectorizer, classifier)
             # log infos
             logging.info(f"\nPredicted tags: {predicted_tags}")

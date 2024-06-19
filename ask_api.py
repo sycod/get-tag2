@@ -5,8 +5,8 @@ import requests
 
 
 # CONFIG
-# API_URL = "http://get-tag-bc104755b0e2.herokuapp.com/predict"
-API_URL = "http://localhost:13370/predict"
+# API_URL = "http://localhost:5000/predict"
+API_URL = "http://get-tag-bc104755b0e2.herokuapp.com/predict"
 # placeholders
 TITLE_PLACEHOLDER = "example: pandas merge with Python >3.5"
 BODY_PLACEHOLDER = """example:
@@ -38,7 +38,7 @@ def update_body():
 def click_button():
     """Actions to perform when button clicked"""
     headers = {'Content-Type': 'application/json; charset=utf-8'}
-    user_input = st.session_state.title_input + "\n" + st.session_state.body_input
+    user_input = st.session_state.title_input + " " + st.session_state.body_input
     post_data = {"user_input": user_input}
 
     print("\n\n********** DEBUG ***********")
@@ -50,8 +50,8 @@ def click_button():
 
     try:
         result = response.json()
-        st.session_state.predicted_tags = result["predicted_tags"][0]
-        st.session_state.message = result["message"][0]
+        st.session_state.predicted_tags = result["predicted_tags"]
+        st.session_state.message = result["message"]
     except Exception as e:
         st.error(f"Error getting prediction: {e}")
 

@@ -3,14 +3,7 @@
 import os
 import dill as pickle
 import logging
-
-
 from flask import Flask, request, jsonify
-# from fastapi import FastAPI
-# from fastapi.responses import HTMLResponse
-# import uvicorn
-
-
 from gensim.models import Word2Vec
 import nltk
 
@@ -68,43 +61,6 @@ else:
     logging.warning("⚠️ No classifier found ⚠️")
 
 
-# app = FastAPI()
-
-# @app.get("/")
-# async def root():
-#     """Simple print function"""
-#     response = "Get tags (from where you once asked for)"
-#     return HTMLResponse(f"<h1>Welcome!</h1><p>{response}</p>")
-
-
-# @app.post("/redict")
-# async def predict(user_input: str):
-#     """Predict tags from a StackOverflow-like question"""
-#     # check user input
-#     if not check_length(user_input):
-#         message = "⚠️  Input length is too short"
-#         predicted_tags = None
-#         logging.warning(message)
-#     else:
-#         # preprocess input
-#         input_clean = preprocess_doc(user_input, keep_set, exclude_set)
-#         logging.info(f"\nClean input: {input_clean}")
-
-#         # check preprocessed input length before predict
-#         if not check_length(input_clean):
-#             message = "⚠️  Length is too short after preprocessing: check input"
-#             predicted_tags = None
-#             logging.warning(message)
-#         else:
-#             # predict tags
-#             predicted_tags = predict_tags(input_clean, vectorizer, classifier)
-#         # log infos
-#         logging.info(f"\nPredicted tags: {predicted_tags}")
-
-#     return {"message": message, "predicted_tags": predicted_tags}
-
-
-
 app = Flask(__name__)
 
 @app.route("/")
@@ -145,4 +101,3 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    # uvicorn.run(app, port=13370, host='127.0.0.1')

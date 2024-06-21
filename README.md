@@ -3,12 +3,12 @@ title: Get tag 2
 emoji: 🏷️
 app_file: api.py
 license: MIT
-URL: get-tag.streamlit.app
+URL: get-tag-bc104755b0e2.herokuapp.com
 ---
 
 [![Build, install, lint, test and format](https://github.com/sycod/get-tag2/actions/workflows/main.yaml/badge.svg)](https://github.com/sycod/get-tag2/actions/workflows/main.yaml)
 
-# [➡️ API endpoint here ⬅️](https://get-tag.streamlit.app)
+# [➡️ API endpoint here ⬅️](http://get-tag-bc104755b0e2.herokuapp.com/predict)
 
 # What for?
 
